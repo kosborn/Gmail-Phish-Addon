@@ -1,0 +1,34 @@
+{
+  "timeZone": "America/Denver",
+  "dependencies": {
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": ["https://www.googleapis.com/auth/gmail.addons.current.message.readonly", "https://www.googleapis.com/auth/gmail.addons.execute", "https://www.googleapis.com/auth/gmail.send", "https://www.googleapis.com/auth/script.locale"],
+  "urlFetchWhitelist": ["https://google.com/"],
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "Report Phish",
+      "logoUrl": "https://cdn3.iconfinder.com/data/icons/food-set-3/91/Food_C205-256.png", 
+      "useLocaleFromApp": true,
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      },
+      "universalActions": [{
+        "label": "Phishing Wiki",
+        "openLink": "https://en.wikipedia.org/wiki/Phishing"
+      }],
+      "openLinkUrlPrefixes": ["https://google.com/"]
+    },
+    "gmail": {
+      "contextualTriggers": [{
+        "unconditional": {
+        },
+        "onTriggerFunction": "onGmailMessage"
+      }],
+      "primaryColor": "#0C71F3",
+      "secondaryColor": "#F38E0C"
+    }
+  }
+}
