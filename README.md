@@ -1,10 +1,16 @@
 # Gmail-Phish-Addon
-A Google Workspace add-on that generated phishing reports.
+A Google Workspace add-on that generated phishing reports. 
 
-*This was hastly createdto provide a standard cross-platform method of reporting phishing emails.*
+Yes, I am aware of Google's Report Phish button. This was made with the intention of having similar functionality that the phish reporting browser addons have.
+
+*This was hastly created to provide a standard cross-platform method of reporting phishing emails.*
+
+## Reporting in the browser
 
 ![Integrated directly into Gmail](WebReport.gif)
 
+
+## Gmail mobile app reporting
 ![Similarly works in the Gmail mobile app.](MobileReport.gif)
 
 
