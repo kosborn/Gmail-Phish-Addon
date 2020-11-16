@@ -32,7 +32,6 @@ simulatedPhishHeaders = [] // If your simulated phishing campaigns have unique e
  * @return {CardService.Card} The card to show to the user.
  */
 function onHomepage(e) {
-  //console.log(e);
   var message;
   message = "Open an email to report it.";
   return createPhishCardHomepage(message, true);
@@ -204,7 +203,6 @@ function onReportPhish(e) {
  * @return {CardService.Card} The card to show to the user.
  */
 function onGmailMessage(e) {
-  //console.log(e);
 
   reportDetails = {};
   
@@ -227,15 +225,11 @@ function onGmailMessage(e) {
   
   // Check if it's a phish test
   var phishTest = false;
-  console.log(simulatedPhishHeaders);
   simulatedPhishHeaders.forEach(function(h) {
-    console.log(message.getHeader(h));
     if(message.getHeader(h) != ""){
-      console.log("Phish Test True");
       phishTest = true;
     }
   })
-  console.log("phishTest"+phishTest);
   
   // Remove labels and prefixes.
   subject = subject
